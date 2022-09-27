@@ -4,7 +4,6 @@ import json
 import asyncio
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
-import pyfiglet
 from config import*
 
 
@@ -102,8 +101,10 @@ def main():
 
         loop.close()
 
-ascii_banner = pyfiglet.figlet_format("SNIPE-BALL")
-print(ascii_banner)
+
+      
+f= open ('art.txt','r')
+print(''.join([line for line in f]))
 print("<Bot by SHAHEN B>")
 print("PLEASE MAKE SURE CONFIG.PY FILE IS CORRECTLY FILLED!!")
 print("___Refer to the README file for detailed discription on how-to setup config file___")
@@ -122,7 +123,7 @@ elif start_bot != "launch":
         main()
      else:
          print("---Program closing.............")
-         print(ascii_banner)
+         print(''.join([line for line in f]))
          print("<Bot by SHAHEN B>")
          time.sleep(3)
          quit()
